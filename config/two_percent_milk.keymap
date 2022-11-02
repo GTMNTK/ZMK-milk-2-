@@ -16,6 +16,12 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp N1>, <&kp N2>, <&kp N3>;
+        td1: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_1";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N4>, <&kp N5>, <&kp N6>;
         };
     };
 
@@ -25,6 +31,7 @@
         default_layer {
             bindings = <
                 &td0
+                &td1
             >;
         };
     };

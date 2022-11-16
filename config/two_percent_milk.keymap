@@ -23,14 +23,14 @@
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&kp M>, <&kp K>, <&kp N2>;
+            bindings = <&kp K_COPY>, <&kp K>, <&kp N2>;
         };
         td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_1";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&kp I>, <&kp L>, <&kp PRCNT>;
+            bindings = <&kp K_PASTE>, <&kp L>, <&kp PRCNT>;
         };  
     };
 

@@ -9,6 +9,30 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+    macros {
+        copy: copy {
+            label = "copy";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp C>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+    };
+    macros {
+        paste: paste {
+            label = "paste";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp V>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+    };
     combos {
         compatible = "zmk,combos";
         combo_space {
@@ -23,14 +47,14 @@
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&kp K_COPY>, <&kp K>, <&bt BT_SEL 0>;
+            bindings = <&copy>, <&kp K>, <&bt BT_SEL 0>;
         };
         td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_1";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&kp K_PASTE>, <&kp L>, <&bt BT_SEL 1>;
+            bindings = <&paste>, <&kp L>, <&bt BT_SEL 1>;
         };  
     };
 
